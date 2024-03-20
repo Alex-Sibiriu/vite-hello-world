@@ -1,30 +1,49 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+  export default {
+    data() {
+      return {
+        title: 'Hello World',
+        text: 'Spero che oggi ti porti gioia, ispirazione e nuove opportunità per crescere e prosperare'
+      }
+    }
+  }
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <h1>{{ title }}</h1>
+    <p>{{ text }}</p>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+  div {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 7rem;
+    cursor: pointer;
+    color: chocolate;
+    transition: all .5s;
+  }
+
+  h1:hover {
+    font-size: 10rem;
+    color: coral;
+    text-shadow: 5px 5px 5px black;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .5s;
+  }
+
+  p:hover {
+    font-size: 2.5rem;
+    color:darkorange;
+    text-shadow: 2px 2px 2px black;
+  }
 </style>
